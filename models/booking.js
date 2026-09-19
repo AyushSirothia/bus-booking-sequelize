@@ -9,14 +9,22 @@ const Booking = sequelize.define("Booking", {
     },
 
     userId: {
-        type: DataTypes.INTEGER,
-        allowNull: false
-    },
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    references: {
+        model: "Users",
+        key: "id"
+    }
+},
 
-    busId: {
-        type: DataTypes.INTEGER,
-        allowNull: false
-    },
+busId: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    references: {
+        model: "Buses",
+        key: "id"
+    }
+},
 
     bookingDate: {
         type: DataTypes.DATE,

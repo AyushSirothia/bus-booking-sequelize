@@ -13,6 +13,7 @@ const userRoutes = require("./routes/userRoutes");
 const busRoutes = require("./routes/busRoutes");
 
 const app = express();
+require("./models/associations");
 
 // Middleware
 app.use(express.json());
